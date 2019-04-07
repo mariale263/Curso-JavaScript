@@ -45,7 +45,34 @@ document.write("<ul>");
     })
 document.write("</ul>");
 
+//CON EL FOR IN
+document.write("<ul>");
+for (const lenguaje in lenguajes) {
+    document.write("<li>"+lenguajes[lenguaje]+"</li>");
+    }
+document.write("</ul>")
 
+//BUSQUEDAS EN UN ARRAY
+
+var busqueda =lenguajes.find(function(lenguaje){
+    return lenguaje == "PHP";
+});
+ console.log(busqueda);
+
+    //podemos reducir este codigo de la siguiente manera:
+    var busqueda =lenguajes.find(lenguaje => lenguaje == "PHP");
+     console.log(busqueda);
+
+     //Con el metodo findIndex: podemos buscar en que indice se encuentra el elemento
+    var busqueda =lenguajes.findIndex(lenguaje => lenguaje == "PHP");
+    console.log(busqueda);
+
+    //Metodo some: para encontrar si hay valores de un tipo u otro dentro de un array haciendo un filtro para ver si existes valores mayores o menores iguales a un valor q yo quiera buscar
+    
+    var precios = [10, 20, 50, 80, 12];
+    
+    var busqueda =precios.some(precio => precio >= 80);
+    console.log(busqueda);
 
 
 
