@@ -75,9 +75,29 @@ for (valor in todosLosDivs) {
     document.querySelector("#miseccion").append(parrafo);
     }
 }
-seccion.append(hr);
-    //append añade despues y preppend añade antes 
+seccion.append(hr); //append añade despues y preppend añade antes 
     
 
 
  // conseguir elementos por su clase css
+ var divRojos = document.getElementsByClassName('rojo'); 
+ var divAmarillos = document.getElementsByClassName('amarillo');
+ divAmarillos[0].style.background = "yellow"; 
+ var div;
+ for(div in divRojos){
+    if(divRojos[div].className == "rojo"){
+        divRojos[div].style.background = "red";
+    }
+}
+
+//query selector
+var id =document.querySelector("#encabezado");
+console.log(id);
+
+var claseRojo = document.querySelector("div.rojo");
+console.log(claseRojo);
+
+var etiqueta = document.querySelectorAll("div");
+console.log(etiqueta); //conclusion el querySelector solo sirve para cosas pequeñas
+//es mas recomendable para varios el getElementByClassName.
+ 
