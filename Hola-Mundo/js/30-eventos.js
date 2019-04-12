@@ -2,7 +2,7 @@
 
 //EVENTOS
  //Evento load: es como el evento ready de jquery, y es que hace que cargue la pagina para poder hacer los eventos.
-window.addEventListener('load', function(){
+window.addEventListener('load', function(){ //o ('load', ()=>{} forma simplificada)
     //Es una funcion que se ejecuta cuando se sucede algo
 
 
@@ -31,6 +31,11 @@ window.addEventListener('load', function(){
 
     boton.addEventListener('click', function(){
         cambiarColor();
+        this.style.border = "10px solid black";
+        /*
+        this: con this hace referencia al objeto al cual yo 
+        estoy haciendo click en ese momento, en este caso es boton.
+        */
     });
 
     //Evento Mouse over
