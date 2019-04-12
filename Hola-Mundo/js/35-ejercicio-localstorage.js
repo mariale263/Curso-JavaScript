@@ -7,7 +7,7 @@
     var formulario = document.querySelector('#formpeliculas');
     
     formulario.addEventListener('submit', function(){
-        ;
+        
         var titulo = document.querySelector('#addpelicula').value;
         
         if(titulo.lengh >= 1){//para que no me lo agregue vacio
